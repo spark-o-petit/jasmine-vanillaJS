@@ -1,3 +1,70 @@
 <script>
-    
+    function computerPlay() {
+        let computerNumber = Math.floor(Math.random() * 3);
+        switch (computerNumber) {
+            case 0:
+                return "rock";
+                break;
+            case 1:
+                return "paper";
+                break;
+            case 2:
+                return "scissor";
+                break;
+            default:
+                break;
+        }
+    }
+    function playGame(playerSelection, computerSelection) {
+        switch (playerSelection) {
+            case "rock":
+                switch (computerSelection) {
+                    case "rock":
+                        return "NEAR MISS!! You draw.";
+                        break;
+                    case "paper":
+                        return "Haha! You lose.";
+                        break;
+                    case "scissor":
+                        return "Wow! You beat the computer."
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case "paper":
+                switch (computerSelection) {
+                    case "paper":
+                        return "NEAR MISS!! You draw.";
+                        break;
+                    case "scissor":
+                        return "Haha! You lose.";
+                        break;
+                    case "rock":
+                        return "Wow! You beat the computer."
+                        break;
+                    default:
+                        break;
+                }
+            break;
+            case "scissor":
+                switch (computerSelection) {
+                    case "scissor":
+                        return "NEAR MISS!! You draw.";
+                        break;
+                    case "rock":
+                        return "Haha! You lose.";
+                        break;
+                    case "paper":
+                        return "Wow! You beat the computer."
+                        break;
+                    default:
+                        break;
+                }
+            break;
+            default:
+                return "Oh! You don't know the rule."
+                break;
+        }
+    }
 </script>
